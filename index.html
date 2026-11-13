@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ead7c2" id="themeColor">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="For Vasu">
+  <meta name="description" content="A little romantic world made with love for Vasu.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <title>A Little World for Vasu ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="sparkles" aria-hidden="true" id="sparkles"></div>
+  <header class="topbar">
+    <a class="brand" href="#home"><span class="brand-heart">♡</span> little love note</a>
+    <nav><a href="#memories">Memories</a><a href="#reasons">Reasons</a><a href="#letter">Letter</a><a href="#music">Play</a></nav>
+  </header>
+  
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-orbit orbit-one"></div>
+      <div class="hero-orbit orbit-two"></div>
+      <div class="hero-content">
+        <span class="eyebrow">✦ a tiny corner of the internet, just for you ✦</span>
+        <p class="pretitle">To my favourite person</p>
+        <h1>Hey, <em>Vasu.</em><br>This little world is yours.</h1>
+        <p class="hero-copy">Out of all the people in this big, busy world, I'm so glad my story got to include you. Here's a little collection of feelings, memories and smiles—with your name on every page.</p>
+        <a class="button button-primary" href="#memories" data-track="explore_button">Come inside, my favourite person <span>♡</span></a>
+        <div class="tiny-note">made with code, care & a whole lot of love</div>
+      </div>
+      <div class="hero-sticker sticker-one">♡</div>
+      <div class="hero-sticker sticker-two">✧</div>
+    </section>
+    
+    <section class="section" id="memories">
+      <div class="section-heading"><span class="eyebrow">01 · our little gallery</span>
+        <h2>Moments I want to keep</h2>
+        <p>Every picture has a story. Add your favourite ones and give each memory a tiny caption.</p>
+      </div>
+      <div class="memory-grid">
+        <article class="memory-card">
+          <div class="photo-frame" id="photo0">
+            <img src="images/jaggu&vasu0.png" alt="📷 Our favourite moment">
+            <!--<div class="photo-placeholder"><span>📷</span><b>Our favourite moment</b><small>Add a photo below</small></div>-->
+          </div>
+          <p contenteditable="false">The kind of day I wish I could replay ♡</p>
+        </article>
+        <article class="memory-card">
+          <div class="photo-frame" id="photo1">
+            <!--<div class="photo-placeholder"><span>🌷</span><b>A happy little memory</b><small>Add a photo below</small></div>-->
+            <img src="images/jaggu&vasu1.png" alt="🌷Happy little memories">
+          </div>
+          <p contenteditable="false">You + me = my favourite view</p>
+        </article>
+        <article class="memory-card">
+          <div class="photo-frame" id="photo2">
+            <img src="images/jaggu&vasu2.png" alt="✨Just us being us">
+            <!--<div class="photo-placeholder"><span>✨</span><b>Just us being us</b><small>Add a photo below</small></div>-->
+          </div>
+          <p contenteditable="false">One for the memory books</p>
+        </article>
+      </div>
+      <!--<div class="center-row"><label class="button button-outline">＋ Add our photos<input id="photoUpload" type="file" accept="image/*" multiple hidden></label><span class="helper">Photos you choose stay on the device you're using.</span></div>-->
+    </section>
+    
+    <section class="section" id="reasons">
+      <div class="section-heading"><span class="eyebrow">02 · tiny truths</span>
+        <h2>Reasons I adore you</h2>
+        <p>Tap a little card. There's something sweet on the other side.</p>
+      </div>
+      <div class="reason-grid" id="reasonsGrid"></div>
+    </section>
+    
+    <section class="section" id="journey">
+      <div class="section-heading"><span class="eyebrow">03 · our story</span>
+        <h2>A timeline of us</h2>
+        <p>Edit these little milestones to make them your own before sharing.</p>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item"><span class="timeline-dot">♡</span>
+          <div class="timeline-card"><small contenteditable="false">THE BEGINNING</small>
+            <h3 contenteditable="false">When our story started</h3>
+            <p contenteditable="false">Ek random Tinder message se shuru hui thi ye kahaani, aur pata hi nahi chala kab tum meri favourite notification, favourite person aur favourite feeling ban gaye.</p>
+          </div>
+        </article>
+        <article class="timeline-item"><span class="timeline-dot">♡</span>
+          <div class="timeline-card"><small contenteditable="false">A LITTLE LATER</small>
+            <h3 contenteditable="false">The memory that makes me smile</h3>
+            <p contenteditable="false">
+              <strong>First video call — 1st October 📱</strong><br>
+              Tumne meri eyes aur curly hair ki tareef ki thi… aur shayad wahi se tum mere dil ke aur kareeb aa gaye.
+              <br><br>
+              <strong>First meet — Chandni Chowk 🥹</strong><br>
+              CP ka plan cancel hua, plans badle, par tumse milne ka excitement nahi. Wo little surprising hug metro pe mujhe door se hi pehchan lena aur mere late hone par bhi bina irritate hue mera wait karna. 🥺
+              <br><br>
+              <strong>A little prayer, a little us 🙏</strong><br>
+              Gurdwara Sis Ganj Sahib mein saath jaana… ek peaceful moment jo hamesha yaad rahega.
+              <br><br>
+              <strong>Pineapple moment 🍍</strong><br>
+              Red Fort jaate hue tumhara favourite pineapple no dought tasty to hota hai akhir pasand mere baby ki hai, mera pyara pineapple boiiii. 🍍🥰
+              <br><br>
+              <strong>Red Fort jhula adventure 🎡</strong><br>
+              Upar jaakar dono ki phat gayi thi, but that hug at the top… uff, one of my favourite memories.
+              <br><br>
+              <strong>Wrong mandir, right memories 😂</strong><br>
+              Gauri Shankar Mandir jaana tha, lekin pehle Jain Mandir pahunch gaye. Galti bhi tumhare saath cute memory ban gayi.
+              <br><br>
+              <strong>Same secrets, same hearts ❤️</strong><br>
+              Jab humne apne secrets share kiye aur pata chala ki kitni cheezein same hain… tab laga God ne kuch toh special match kiya hai.
+              <br><br>
+              <strong>My 1st October wish ✨</strong><br>
+              Maine 1st October ko better future maanga tha, aur mujhe usi din tum mil gaye. Maybe this was our October magic.
+            </p>
+          </div>
+        </article>
+        <article class="timeline-item"><span class="timeline-dot">♡</span>
+          <div class="timeline-card"><small contenteditable="false">TODAY & ALWAYS</small>
+            <h3 contenteditable="false">Still choosing you</h3>
+            <p contenteditable="false">Kal kya hoga pata nahi, but itna zaroor pata hai ki main apne aane wale har kal mein tumhe dekhna chahta hoon. Aaj bhi tum, kal bhi tum, aur hopefully hamesha tum.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+    
+    <section class="section" id="letter">
+      <div class="section-heading"><span class="eyebrow">04 · from my heart</span>
+        <h2>A letter for Vasu</h2>
+        <p>Some things are easier to say when they're written down.</p>
+      </div>
+      <div class="letter-shell">
+        <div class="envelope">
+          <div class="envelope-art">💌</div>
+          <h3>A little note, sealed with love</h3>
+          <p>Only for you, Vasu.</p><button class="button button-primary" id="openLetter" data-track="letter_open">Open your letter ♡</button>
+        </div>
+        <article class="letter-paper" id="letterPaper" hidden>
+          <div class="love-letter">
+            
+            <h2>To My Vasu, ❤️</h2>
+            
+            <p>Heyyy mera pyaara sa Vasu! 🥺❤️</p>
+            <p id="musicReminder" class="music-reminder"></p>
+            <p>
+              Kabhi-kabhi sochta hoon ki humari story kitni randomly start hui thi.
+              Tinder par tumhara woh random message, phir thodi der tak koi response nahi 😂,
+              uske baad tumhara mera mobile number maangna, aur number exchange hone ke
+              baad WhatsApp par tumhara mujhse Snap ID maangna, video call k liye 😁. Pata nahi tha ki ek
+              random conversation meri life ka itna special part ban jayegi.
+            </p>
+            
+            <p>
+              Aur ek baat pata hai? Mujhe <strong>October Theory</strong> yaad aati hai.
+              1st October ko maine ek story post ki thi, wishing for a better future (Be kind and nice to me october).
+              Mujhe bilkul idea nahi tha ki usi din meri life mein koi aisa aane wala hai
+              jo mere future ka itna beautiful part ban jayega.
+              And that someone was YOU, Vasu! 🥺❤️
+            </p>
+            
+            <p>
+              Phir usi raat humari first video call hui. Mujhe abhi bhi yaad hai tum mere
+              eyes aur curly hairs ki tareef kar rahe the aur keh rahe the kitne cute hain.
+              😂❤️ Sach bataun, woh compliments mujhe aaj bhi yaad hain.
+            </p>
+            
+            <p>
+              Aur phir humari first meeting! Pehle CP jaane ka plan banaya, lekin strike
+              ki wajah se CP band tha. Phir Kashmere Gate aur finally Chandni Chowk! 😂
+              Wahan pehle Gurdwara Sis Ganj Sahib gaye, phir Red Fort ki taraf nikle.
+            </p>
+            
+            <p>
+              Aur mujhe tumhara favourite <strong>pineapple</strong> bhi yaad hai! 🍍❤️
+              Pyaar sirf bade moments yaad rakhna nahi hota, kabhi-kabhi kisi ka favourite pineapple bhi yaad reh jaana hota hai. 🍍🥹❤️.
+            </p>
+            
+            <p>
+              Aur woh jhuleeee! 😭😂 Dono bade brave ban rahe the, lekin jaise hi ride
+              top par pahunchi, humari hawa tight ho gayi. Dar ke maare ek dusre ko
+              hug kar rahe the. Honestly, woh moment kitna cute tha! aur vo 2 ladkiya kaise dekh rhi thi k j kya ho rha hai bhai 😳🤣
+            </p>
+            
+            <p>
+              Aur Gauri Shankar Mandir ki jagah galti se Jain Mandir pahunch jaana. 😂
+              Phir apni galti realise karke hasna aur finally correct mandir jaana.
+              Pata nahi kyun, lekin humari yeh chhoti-chhoti mistakes bhi meri
+              favourite memories ban gayi hain.
+            </p>
+            
+            <p>
+              Lekin sabse special baat yeh hai ki dheere-dheere humne ek dusre ke saath
+              apne secrets, feelings aur woh baatein share karni shuru ki jo shayad hum
+              kisi aur ko nahi bata paate. Aur jab pata chala ki humare secrets bhi
+              kitne similar hain, toh sach mein laga ki God ne kuch toh special kiya
+              hai humare liye. ❤️
+            </p>
+            
+            <p>
+              Ek baat aur, jab tumne apna secret batakar kaha tha ki tum piche hat rhe ho 💔😭 so that k meri vjah se tumhe koi problem na ho hum friends bankar
+              continue kar sakte hain, honestly uss waqt mujhe bahut bura laga tha.
+              Kyunki main tumhe sirf friend bankar nahi dekhna chahta tha kinda selfish at that moment.
+              Mujhe darr tha ki kahin koi aur tumhari life mein na aa jaaye aur main
+              tumhe kho na doon.
+            </p>
+            
+            <p>
+              Aur mere overthinker baby, mujhe pata hai tum bhi kabhi-kabhi mujhe
+              lose karne se darte ho. 🥺 But please apne mind mein itni negative
+              stories mat banaya karo. Jab bhi kuch bother kare, mujhse baat karna.
+              Main chahta hoon ki hum ek dusre ko samjhein, na ki apne thoughts mein
+              hi pareshaan hote rahein.
+            </p>
+            
+            <p>
+              Mujhe pata hai hum perfect nahi hain. Kabhi misunderstandings hongi,
+              kabhi arguments, kabhi ek dusre ko irritate bhi karenge. 😂 But mujhe
+              perfect relationship nahi chahiye, mujhe <strong>humara relationship
+                chahiye</strong>, jisme pyaar ho, hasi ho, thoda sa pagalpan ho aur
+              bahut saari memories hon.
+            </p>
+            
+            <p>
+              Bas aage bhi aise hi random plans banane hain, dates par jaana hai,
+              pictures leni hain, ek dusre ko hug karna hai aur naye-naye memories
+              create karni hain. Haan, next time correct mandir hi jaana hai please! 😭😂
+            </p>
+            
+            <p>
+              Aur jab bhi <em>Enna Sona</em> suno, toh humari story yaad karna.
+              Ek random Tinder message se lekar yahan tak ka safar kitna unexpected
+              aur beautiful raha hai na?
+            </p>
+            
+            <p>
+              Thank you meri life mein aane ke liye, Vasu. Kabhi-kabhi lagta hai meri
+              1st October wali wish ka answer tum the. ❤️ I don't know future mein
+              kya-kya hoga, but I genuinely want ki hum aur bhi bahut saari beautiful
+              memories banayein.
+            </p>
+            
+            <p>
+              <strong>
+                I love you so much, mere pyaare overthinker.
+                Kabhi doubt mat karna ki tum mere liye kitne special ho. ❤️
+              </strong>
+            </p>
+            
+            <p>
+              Ab jaldi se ek tight hug do apne boy ko. No excuses! 🫂💋
+            </p>
+            
+            <p class="letter-signature">
+              <strong>Forever yours,</strong><br>
+              Tumhara favourite headache, Jaggu🙈❤️
+            </p>
+            
+            <p class="letter-ps">
+              <strong>P.S.</strong> Thank God Tinder par tumne message kiya tha,
+              warna mujhe un scary jhulon par hug karne wala kaun milta? 😂❤️
+            </p>
+            
+          </div>
+          <button class="button button-soft" id="letterHug" data-track="letter_hug">Send a virtual hug 🤗</button>
+        </article>
+      </div>
+    </section>
+    
+    <section class="section" id="music">
+      <div class="section-heading">
+        <span class="eyebrow">05 · our soundtrack</span>
+        <h2>Press play, think of us</h2>
+        <p>A little melody, a million feelings.</p>
+      </div>
+      
+      <div class="music-card">
+        <div class="album-art">💗</div>
+        
+        <div class="music-details">
+          <h3>Enna Sona</h3>
+          <p>OK Jaanu · Arijit Singh</p>
+          
+          <div class="music-actions">
+            <button class="button button-soft" id="playSong">
+              ▶ Play
+            </button>
+            
+            <button class="button button-outline" id="pauseSong">
+              Ⅱ Pause
+            </button>
+          </div>
+          
+          <p id="songStatus">Made for you, Vasu ❤️</p>
+        </div>
+      </div>
+      
+      <audio id="audio" preload="metadata">
+        <source src="./music/Enna Sohna - Ok Jaanu.mp3" type="audio/mpeg">
+      </audio>
+    </section>
+    
+    <section class="final-section">
+      <span class="eyebrow">✧ end of this page, never the story ✧</span>
+      <h2>In every version<br>of my story, <em>it's you.</em></h2>
+      <p>Thank you for being my favourite hello,<br>and one of my favourite reasons to smile.</p>
+      <button class="button button-primary" id="finalHug" data-track="final_hug">One more hug? 🤗</button>
+    </section>
+  </main>
+  <footer>hand-coded with love · for Vasu ♡</footer>
+  
+  <div class="consent-backdrop" id="consentBackdrop" hidden>
+    <div class="consent-card">
+      <div class="consent-heart">♡</div>
+      <h2>A tiny note about reactions</h2>
+      <p>If you choose to continue, a few interactions on this page—like opening the letter, tapping a love card or sending a virtual hug—will be shared with the person who made this page. No message contents, photos, song files or location are collected.</p>
+      <div class="consent-actions"><button class="button button-primary" id="allowSharing">Okay, share my reactions</button><button class="text-button" id="declineSharing">No thanks, just let me browse</button></div>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app-config.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

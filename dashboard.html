@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ead7c2">
+  <title>Your little reactions dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      min-height: 100vh
+    }
+    
+    .dash {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px
+    }
+    
+    .panel {
+      background: #fffdfb;
+      border: 1px solid white;
+      border-radius: 24px;
+      padding: 25px;
+      box-shadow: var(--shadow)
+    }
+    
+    .dash h1 {
+      font: 2.4rem "Playfair Display", serif
+    }
+    
+    .dash p {
+      color: var(--muted);
+      line-height: 1.7
+    }
+    
+    .field {
+      display: block;
+      width: 100%;
+      padding: 13px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      margin: 9px 0 15px;
+      background: white
+    }
+    
+    .reaction {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--line)
+    }
+    
+    .reaction small {
+      color: var(--muted)
+    }
+    
+    .hidden {
+      display: none
+    }
+    
+    .notice {
+      font-size: .82rem;
+      background: #f7eee7;
+      border-radius: 12px;
+      padding: 13px
+    }
+  </style>
+</head>
+
+<body>
+  <main class="dash"><a class="brand" href="index.html">♡ back to Vasu's page</a>
+    <section class="panel" style="margin-top:22px"><span class="eyebrow">private creator view</span>
+      <h1>Your little reactions ♡</h1>
+      <p>Sign in with the owner account you created in Supabase to see the interactions Vasu has chosen to share.</p>
+      <div id="setupWarning" class="notice hidden">Add your Supabase project URL and anon key to <b>app-config.js</b>, then upload the updated files.</div>
+      <div id="loginBox"><label>Email<input class="field" id="email" type="email" autocomplete="username"></label><label>Password<input class="field" id="password" type="password" autocomplete="current-password"></label><button class="button button-primary" id="login">Sign in</button>
+        <p id="loginMsg" role="status"></p>
+      </div>
+      <div id="feedBox" class="hidden">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
+          <h2 style="font:1.5rem 'Playfair Display',serif">Recent reactions</h2>
+          <div><button class="button button-soft" id="refresh">Refresh</button> <button class="button button-outline" id="logout">Sign out</button></div>
+        </div>
+        <p class="notice">Only interactions recorded after the visitor opts in appear here. This page does not show live camera, location, private messages, or device contents.</p>
+        <div id="feed"></div>
+      </div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app-config.js"></script>
+  <script>
+    const cfg = window.APP_CONFIG || {},
+      ready = !!(cfg.SUPABASE_URL && cfg.SUPABASE_ANON_KEY && !cfg.SUPABASE_URL.includes("YOUR_") && !cfg.SUPABASE_ANON_KEY.includes("YOUR_"));
+    const warning = document.getElementById("setupWarning");
+    if (!ready) warning.classList.remove("hidden");
+    const client = ready ? supabase.createClient(cfg.SUPABASE_URL, cfg.SUPABASE_ANON_KEY) : null;
+    const loginBox = document.getElementById("loginBox"),
+      feedBox = document.getElementById("feedBox"),
+      msg = document.getElementById("loginMsg");
+    async function loadFeed() { if (!client) return; const { data, error } = await client.from("love_reactions").select("event_name,detail,created_at").order("created_at", { ascending: false }).limit(100); if (error) { msg.textContent = error.message; return } const feed = document.getElementById("feed");
+      feed.replaceChildren(); if (!data.length) { feed.textContent = "No shared reactions yet. When Vasu opts in and interacts, they'll appear here."; return } data.forEach(item => { const row = document.createElement("div");
+        row.className = "reaction"; const left = document.createElement("div"); const title = document.createElement("b");
+        title.textContent = (item.event_name || "reaction").replaceAll("_", " "); const detail = document.createElement("div");
+        detail.textContent = item.detail || "";
+        detail.style.color = "#8e7a75";
+        detail.style.fontSize = ".88rem";
+        left.append(title, detail); const date = document.createElement("small");
+        date.textContent = new Date(item.created_at).toLocaleString();
+        row.append(left, date);
+        feed.append(row) }) }
+    document.getElementById("login").onclick = async () => { if (!client) { msg.textContent = "Set up Supabase first (see SETUP.md)."; return } const { error } = await client.auth.signInWithPassword({ email: document.getElementById("email").value, password: document.getElementById("password").value }); if (error) { msg.textContent = error.message; return } loginBox.classList.add("hidden");
+      feedBox.classList.remove("hidden");
+      loadFeed() };
+    document.getElementById("refresh").onclick = loadFeed;
+    document.getElementById("logout").onclick = async () => { await client.auth.signOut();
+      feedBox.classList.add("hidden");
+      loginBox.classList.remove("hidden") };
+  </script>
+</body>
+
+</html>

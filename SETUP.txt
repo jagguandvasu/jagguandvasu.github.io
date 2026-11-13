@@ -1,0 +1,36 @@
+VASU'S ROMANTIC WEB APP — SETUP
+
+1) PUBLISH THE WEBSITE
+- Create a free Supabase project at https://supabase.com/
+- Create an account for yourself in Supabase Authentication (Email/Password).
+- Open SQL Editor and run schema.sql.
+- In Authentication > Users, copy your user UUID.
+- In schema.sql, replace OWNER_USER_UUID with your UUID and run the SELECT policy section again (or run the whole file after replacing the placeholder).
+- In Project Settings > API, copy Project URL and anon/public key.
+- Paste those into app-config.js. Never use the service_role/secret key in browser code.
+- Upload the entire contents of this folder to an HTTPS static host such as Netlify, Cloudflare Pages or GitHub Pages. Keep file/folder paths unchanged.
+
+2) YOUR REACTIONS DASHBOARD
+- Open https://YOUR-SITE/dashboard.html
+- Sign in with your Supabase owner email and password.
+- Refresh to see opted-in page interactions. This is a manual refresh dashboard, not instant push notifications.
+
+3) IPHONE INSTALLATION
+- Send Vasu the HTTPS website URL.
+- On iPhone, open it in Safari > Share > Add to Home Screen > Add.
+- The heart/V icon and standalone display mode are configured. Safari is the recommended iPhone installation route.
+- On Android/Chrome, use the browser menu > Install app or Add to Home screen.
+
+4) IMPORTANT PRIVACY NOTES
+- The first visit asks the visitor whether to share a limited set of button interactions.
+- If they decline, browsing still works and no reactions are sent.
+- Logged events include action names, optional short quiz/card details, and timestamps. No photos, audio files, message contents, location, contacts, or camera data are collected.
+- Visitors can clear the site's browser storage to reset their choice.
+- The reaction feed is restricted to the owner account by Supabase Row Level Security.
+- The app shell is cached for offline opening after first successful online load. Reaction sharing requires internet.
+- Browser theme-color is set to the same warm tan as the site's palette. Browser UI tint support varies by browser/device; iOS Safari may not tint its tab bar identically.
+
+5) CUSTOMIZATION
+- Edit index.html for letter copy and timeline details.
+- Edit style.css for colours. Main tan is --tan / #ead7c2; theme-color is #ead7c2.
+- Replace icons in icons/ with your own artwork, preserving filenames and dimensions.
