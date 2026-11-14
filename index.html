@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ead7c2">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="For Vasu">
+  <meta name="description" content="A little private world for two.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <title>A Little World for Vasu ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .auth-wrap{min-height:100svh;display:grid;place-items:center;padding:24px;position:relative;z-index:5}
+    .auth-card{width:min(100%,430px);background:#fffdfb;border:1px solid #fff;border-radius:28px;padding:30px 25px;box-shadow:0 18px 55px rgba(126,91,77,.14);text-align:center}
+    .auth-heart{font-size:38px;color:#d98fa8}
+    .auth-card h1{font:2rem 'Playfair Display',serif;color:#684b50;margin:8px 0}
+    .auth-card p{color:#8e7a75;line-height:1.65}
+    .auth-field{display:block;text-align:left;margin:16px 0;color:#8e7a75;font-size:.9rem}
+    .auth-field input{display:block;width:100%;margin-top:7px;padding:14px;border:1px solid #efdfd5;border-radius:13px;background:#fffaf6;color:#51413f;outline-color:#d98fa8}
+    .auth-submit{width:100%;border:0;border-radius:999px;padding:14px;background:#d98fa8;color:white;font-weight:700;margin-top:8px}
+    .auth-message{min-height:24px;font-size:.9rem;overflow-wrap:anywhere}
+    #privateContent[hidden],#loginPanel[hidden]{display:none!important}
+    .auth-logout{position:fixed;z-index:10;right:12px;top:12px;border:1px solid #efdfd5;background:#fffaf6;color:#8e596c;border-radius:99px;padding:9px 13px}
+  </style>
+</head>
+<body>
+  <section class="auth-wrap" id="loginPanel">
+    <div class="auth-card">
+      <div class="auth-heart">♡</div>
+      <h1>Our little world</h1>
+      <p>Just for you and me. Sign in with your own account to come inside. 💗</p>
+      <form id="loginForm">
+        <label class="auth-field">Email
+          <input id="email" type="email" autocomplete="username" required placeholder="Your email address">
+        </label>
+        <label class="auth-field">Password
+          <input id="password" type="password" autocomplete="current-password" required placeholder="Your password">
+        </label>
+        <button class="auth-submit" id="loginButton" type="submit">Unlock our little world ♡</button>
+      </form>
+      <p class="auth-message" id="authMessage" role="status"></p>
+      <p style="font-size:.78rem">Two accounts only · made with love</p>
+    </div>
+  </section>
+  <button class="auth-logout" id="logoutButton" hidden>Log out</button>
+  <div id="privateContent" hidden></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app-config.js"></script>
+  <script src="auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "id": "./",
+  "name": "A Little World for Vasu",
+  "short_name": "For Vasu",
+  "description": "A little romantic world made with love for Vasu.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fffaf6",
+  "theme_color": "#ead7c2",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
