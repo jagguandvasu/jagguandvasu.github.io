@@ -1,5 +1,5 @@
 // Supabase project URL and anon/public key only. NEVER use service_role here.
 window.APP_CONFIG = {
-  SUPABASE_URL: "PASTE_YOUR_SUPABASE_PROJECT_URL",
-  SUPABASE_ANON_KEY: "PASTE_YOUR_SUPABASE_ANON_PUBLIC_KEY"
+  SUPABASE_URL: "https://xbxtmkgujsptxdjapsmc.supabase.co",
+  SUPABASE_ANON_KEY: "sb_publishable_akALGnE1gR1UIVNkDTkCgg_fD4cNo2e"
 };
