@@ -66,6 +66,22 @@
     logoutButton.hidden = false;
     message.textContent = "";
 
+// Load the private website CSS after successful login.
+const cssBlob = await privateFile("site/style.css");
+const cssUrl = URL.createObjectURL(cssBlob);
+objectUrls.push(cssUrl);
+
+let privateStylesheet = document.getElementById("privateSiteStylesheet");
+
+if (!privateStylesheet) {
+  privateStylesheet = document.createElement("link");
+  privateStylesheet.id = "privateSiteStylesheet";
+  privateStylesheet.rel = "stylesheet";
+  document.head.appendChild(privateStylesheet);
+}
+
+privateStylesheet.href = cssUrl;
+
     // Load the original private application logic only after successful authentication.
     window.vasuSupabase = client;
     const appBlob = await privateFile("site/app.js");
