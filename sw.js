@@ -1,5 +1,5 @@
 // Cache only the public login shell. Never cache private photos, audio, HTML or app code.
-const CACHE = 'vasu-private-login-shell-v1.1.2';
+const CACHE = 'vasu-private-login-shell-v1.1.3';
 const FILES = ['./', './index.html', './style.css', './app-config.js', './auth.js',
   './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png', './icons/apple-touch-icon.png'];
 self.addEventListener('install', event => {
