@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "A Little World for Vasu",
-  "short_name": "For Vasu",
-  "description": "A little romantic world made with love for Vasu.",
+  "name": "Our Little World",
+  "short_name": "For Us",
+  "description": "A little romantic world made with love for Us.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
