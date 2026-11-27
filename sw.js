@@ -1,7 +1,7 @@
 // Public login-shell cache + Web Push receiver.
 // Never cache private photos, audio, HTML or app code.
 
-const CACHE = 'vasu-private-login-shell-v2.0.2';
+const CACHE = 'vasu-private-login-shell-v2.0.3';
 
 const FILES = [
   './',
