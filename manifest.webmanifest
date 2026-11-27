@@ -1,7 +1,7 @@
 {
   "id": "./",
   "name": "Our Little World",
-  "short_name": "For Us",
+  "short_name": "EverUs",
   "description": "A little romantic world made with love for Us.",
   "start_url": "./index.html",
   "scope": "./",
